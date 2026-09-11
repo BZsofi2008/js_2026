@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asdasd</title>
+    <style>
+        body{
+            background-color: rgb(255, 221, 243);
+        }
+    </style>
 </head>
 <body>
     <h1>✨test✨</h1>
-    <button>kattints rám!</button>
-    <button>ne kattins rám</button>
+    <button id="digigigigigihe" onclick="elso()">kattints rám!</button>
+    <button id="second" onclick="masodik()">ne kattins rám</button>
     <button>asd</button>
+
+    <script>
+        function elso(){
+            document.getElementById("digigigigigihe").innerHTML = "ez egy szöveg!!"
+        }
+        function masodik(){
+            let darab = 0++
+            document.getElementById("second").innerHTML = darab
+        }
+    </script>
 </body>
 </html>
