@@ -1,2 +1,2 @@
 # js_2026
-csak diak vagyok. pls ne nezd milyen hulye vagyok..
+csak diák vagyok. pls ne nézd milyen hülye vagyok..
