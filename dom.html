@@ -14,26 +14,28 @@
     <h1>✨test✨</h1>
     <button id="digigigigigihe" onclick="elso()">kattints rám!</button>
     <button id="second" onclick="masodik()">ne kattins rám - számmá válok</button>
-    <button id="third" onclick="harmadik()">asd</button><br><br><br><br><br>
-
-    <center>
-    <img src="cat.gif" alt="u can not rage bait me">
-    </center>
-
+    <button id="third" onclick="harmadik()">asd</button>
+    <button id="fourth" onclick="negyedik()">stop🛑</button>
     <script>
         function elso(){
             document.getElementById("digigigigigihe").innerHTML = "ez egy szöveg!!"
         }
 
         let darab = 0;
+        let szamlaloFut = false;
         function masodik(){
             darab ++;
             document.getElementById("second").innerHTML = darab
         }
 
-        let 
         function harmadik(){
-            setInterval(masodik, 1000);
+            if(szamlaloFut === false){
+                szamlaloFut = setInterval(masodik, 1000);
+            }
+
+        function negyedik(){
+            
+        }
         }
     </script>
 </body>
