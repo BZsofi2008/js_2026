@@ -6,6 +6,7 @@
     <title>Form</title>
 </head>
 <body>
+    
     <div>
         <fieldset>
         <legend>Formocska</legend>
@@ -14,6 +15,7 @@
             <input type="number" id="masodik">                                                  <br><br>
             <input type="number" id="harmadik">                                                 <br><br>
             <button type="button" onclick="szamolas()">Számol</button> 
+            <div id="uzenet"></div>
         </form>
     </fieldset>
     </div>
@@ -21,21 +23,33 @@
     <script>
         function szamolas(){
             let a_oldal = document.getElementById("elso").value;
-            console.log(a_oldal)
+            // console.log(a_oldal)
             a_oldal = parseInt(a_oldal) 
             console.log(a_oldal)
 
-            console.log("ez egy szoveg")
+            // console.log("ez egy szoveg")
 
             let b_oldal = document.getElementById("masodik").value;
-            console.log(b_oldal)
+            // console.log(b_oldal)
             b_oldal = parseInt(b_oldal) 
             console.log(b_oldal)
 
             let c_oldal = document.getElementById("harmadik").value;
-            console.log(c_oldal)
+            // console.log(c_oldal)
             c_oldal = parseInt(c_oldal) 
             console.log(c_oldal)
+
+            if(a_oldal + b_oldal > c_oldal
+               && b_oldal + c_oldal > a_oldal
+               && a_oldal + c_oldal > b_oldal
+            ){
+                console.log("lehet háromszög")
+                document.getElementById("uzenet").innerHTML = "lehet háromszög"
+            }
+            else{
+                console.log("nem lehet háromszög")
+                document.getElementById("uzenet").innerHTML = "nem lehet háromszög"
+            }
         }
     </script>
 </body>
