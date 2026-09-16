@@ -12,14 +12,30 @@
         <form action="">
             <input type="number" id="elso">                                                     <br><br> 
             <input type="number" id="masodik">                                                  <br><br>
-            <input type="number" id="harmadik"> <button type="button" onclick="szamolas()">Számol</button> 
+            <input type="number" id="harmadik">                                                 <br><br>
+            <button type="button" onclick="szamolas()">Számol</button> 
         </form>
     </fieldset>
     </div>
 
     <script>
         function szamolas(){
-            
+            let a_oldal = document.getElementById("elso").value;
+            console.log(a_oldal)
+            a_oldal = parseInt(a_oldal) 
+            console.log(a_oldal)
+
+            console.log("ez egy szoveg")
+
+            let b_oldal = document.getElementById("masodik").value;
+            console.log(b_oldal)
+            b_oldal = parseInt(b_oldal) 
+            console.log(b_oldal)
+
+            let c_oldal = document.getElementById("harmadik").value;
+            console.log(c_oldal)
+            c_oldal = parseInt(c_oldal) 
+            console.log(c_oldal)
         }
     </script>
 </body>
