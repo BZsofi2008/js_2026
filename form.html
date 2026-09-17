@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
-<body>
+<body style="background-color: rgb(102, 101, 101); color: white;">
 
     <div>
         <fieldset>
@@ -16,6 +16,7 @@
             <input type="number" id="harmadik">                                                 <br><br>
             <button type="button" onclick="szamolas()">Számol</button> 
             <div id="uzenet"></div>
+            <div id="uzenet2"></div>
         </form>
     </fieldset>
     </div>
@@ -50,9 +51,46 @@
                 console.log("nem lehet háromszög")
                 document.getElementById("uzenet").innerHTML = "nem lehet háromszög"
             }
+
+            // c oldalhoz
             if(c_oldal > a_oldal && c_oldal > b_oldal){
-                if(c_oldal * c_oldal == a_oldal * a_oldal + b_oldal * b_oldal);
+                if(c_oldal * c_oldal == a_oldal * a_oldal + b_oldal * b_oldal){
+                    console.log("lehet derékszög")
+                    document.getElementById("uzenet2").innerHTML = "lehet derékszögű"
+                }else{
+                    console.log("nem lehet derékszög")
+                    document.getElementById("uzenet2").innerHTML = "nem lehet derékszögű"
+                }
             }
+            else if(b_oldal > a_oldal && b_oldal > c_oldal){
+                if(b_oldal * b_oldal == a_oldal * a_oldal + c_oldal * c_oldal);
+            }
+            else if(a_oldal > b_oldal && a_oldal > b_oldal){
+                if(a_oldal * a_oldal == c_oldal * c_oldal + b_oldal * b_oldal);
+            }
+
+            /* ez egy hosszabb, bonyibb valtozat
+            if(b_oldal > a_oldal && b_oldal > c_oldal){
+                if(b_oldal * b_oldal == a_oldal * a_oldal + c_oldal * c_oldal){
+                    console.log("lehet derékszög")
+                    document.getElementById("uzenet2").innerHTML = "lehet derékszögű"
+                }else{
+                    console.log("nem lehet derékszög")
+                    document.getElementById("uzenet2").innerHTML = "nem lehet derékszögű"
+                }
+            }
+
+            // a oldalhoz
+            if(a_oldal > b_oldal && a_oldal > b_oldal){
+                if(a_oldal * a_oldal == c_oldal * c_oldal + b_oldal * b_oldal){
+                    console.log("lehet derékszög")
+                    document.getElementById("uzenet2").innerHTML = "lehet derékszögű"
+                }else{
+                    console.log("nem lehet derékszög")
+                    document.getElementById("uzenet2").innerHTML = "nem lehet derékszögű"
+                }
+            }
+            */
         }
     </script>
 </body>
