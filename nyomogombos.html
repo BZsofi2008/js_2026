@@ -48,11 +48,11 @@
             </div>
 
             <div class="col-3 container px-5" id="bill2">
-                <div class="row"><h2>innerHTML másként</h2></div>
+                <div class="row"><h2>innerHTML 2</h2></div>
             </div>
 
-            <div class="col-3 container px-5" id="">
-                <div class="row"><h2></h2>S</div>
+            <div class="col-3 container px-5" id="billDOM">
+                <div class="row"><h2>DOM</h2></div>
             </div>
 
         </div>
@@ -126,52 +126,70 @@
 
         }
 
+        function letrehozDOM()
+        {
 
-        function letrehozDOM(){
-            //billDOM
             let b = document.getElementById("billDOM");
-/*
-                <div class="row">
+
+            /*let b=document.getElementById("bill2");
+            //console.log(b);
+
+
+            /*<div class="row">
                     <div class="col-4 text-center border py-3">1</div>
                     <div class="col-4 text-center border py-3">2</div>
                     <div class="col-4 text-center border py-3">3</div>
-                </div>
+                </div> */
 
-*/ 
-            let sor = document.createElement("div");
-            sor.className = "row";
+            /*let szoveg=" "
 
-            cellaKeszit(1);
-            
-            /* let cella = document.createElement("div");
-            cella.className = "col-4 text-center border py-3";
-            cella.innerHTML = 1; */
+            for(let k=0;k<3;k++)
+            {
+                szoveg+=sorKeszit([k*3+1,k*3+2,k*3+3]);
+            }
+                szoveg+=sorKeszit(["",0,""]);
 
+            b.innerHTML+=szoveg;*/
+
+            for(let k=0;k<3;k++)
+            {
+                let sor=sorKeszitDOM([k*3+1,k*3+2,k*3+3]);
+                b.appendChild(sor);
+            }
+            let sor=sorKeszitDOM(["",0,""]);
+            b.appendChild(sor);
+
+
+                sorKeszitDOM(1);
 
         }
-        function cellaKeszit(szamok){
+
+        function cellaKeszit(szam)
+        {
             let cella = document.createElement("div");
-            cella.className = "col-4 text-center border py-3";
-            cella.innerHTML = szamok;
+            cella.className="col-4 text-center border py-3";
+            cella.innerHTML=szam;
 
             return cella;
         }
 
-        function sorKeszitDOM(szamok){
-//            let szoveg='<div class="row">';
-            let sor = document.createElement("div");
-            sor.className = "row";
+         function sorKeszitDOM(szamok)
+        {
+
+            let sor=document.createElement("div");
+            sor.className="row";
 
             for(let i=0;i<3;i++)
             {
-//                 szoveg+='<div class="col-4 text-center border py-3">' + szamok[i] + '</div>';
-                    
+                let cella=cellaKeszit(szamok[i]);
+                sor.appendChild(cella);
             }
-            szoveg+="</div>";
 
-            return szoveg;
+            return sor;
+
         }
-        
+
+
     </script>
     
 </body>
