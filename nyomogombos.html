@@ -47,12 +47,12 @@
                 <div class="row"><h2>InnerHTML</h2></div>
             </div>
 
-            <div class="col-3 container" id="bill2">
-                <div class="row"><h2>innerHTML maskent</h2></div>
+            <div class="col-3 container px-5" id="bill2">
+                <div class="row"><h2>innerHTML másként</h2></div>
             </div>
 
-            <div class="col-3 container" id="">
-                <div class="row"><h2></h2></div>
+            <div class="col-3 container px-5" id="">
+                <div class="row"><h2></h2>S</div>
             </div>
 
         </div>
@@ -96,49 +96,36 @@
             b.innerHTML+=szoveg;
         }
 
-                function letrehoz2()
+        function letrehoz2()
         {
             let b=document.getElementById("bill2");
             //console.log(b);
 
-            let szoveg=" ";
+            let szoveg=" "
 
             for(let k=0;k<3;k++)
             {
-                szoveg+='<div class="row">';
-                for(let i=0;i<3;i++)
-                {
-                    szoveg+='<div class="col-4 text-center border py-3">' + (i + 1 + k*3) + '</div>';
-                }
-                szoveg+="</div>";
+                szoveg+=sorKeszit([k*3+1,k*3+2,k*3+3]);
             }
-                szoveg+='<div class="row">';
-                for(let i=0;i<3;i++)
-                {
-                    if(i===1)
-                    {
-                        szoveg+='<div class="col-4 text-center border py-3">0</div>';
-                    }
-                    else
-                    {
-                        szoveg+='<div class="col-4 text-center border py-3"></div>';
-                    }
-                }
-                szoveg+="</div>";
+                szoveg+=sorKeszit(["",0,""]);
 
             b.innerHTML+=szoveg;
         }
 
-        function sorKeszit(szamok){
-                let szoveg ='<div class="row">';
-                for(let i=0;i<3;i++)
-                {
-                    szoveg+='<div class="col-4 text-center border py-3">' + szamok[i] + '</div>';
-                }
-                szoveg+="</div>";
+        function sorKeszit(szamok)
+        {
 
-                return szoveg;
+            szoveg='<div class="row">';
+            for(let i=0;i<3;i++)
+            {
+                 szoveg+='<div class="col-4 text-center border py-3">' + szamok[i] + '</div>';
+            }
+            szoveg+="</div>";
+
+            return szoveg;
+
         }
+
     </script>
     
 </body>
