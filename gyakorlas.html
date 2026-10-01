@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gyakorlas</title>
 </head>
-<body onload="feladat1(); feladat2(); feladat3(); feladat100(); feladat4()">
+<body onload="feladat1(); feladat2(); feladat3(); feladat100(); feladat4(); maradek()">
     <div id="feladat1"></div>
     <div id="feladat2"></div>
     <div id="feladat100"></div>
     <div id="feladat3"></div>
     <div id="feladat4"></div>
+    <div id="szam0"><h2>0</h2></div>
+    <div id="szam1"><h2>1</h2></div>
+    <div id="szam2"><h2>2</h2></div>
+    <div id="szam3"><h2>3</h2></div>
+    <div id="szam4"><h2>4</h2></div>
+    <div id="szam5"><h2>5</h2></div>
+    <div id="szam6"><h2>6</h2></div>
 
 
 
@@ -60,16 +67,25 @@
         function feladat4()
         {
             let doboz = document.getElementById("feladat4")
-            for(let i=0;i<i++)
+            for(let i=0;i<=1000;i+=5)
         {
-            doboz.innerHTML+=i+=5
+            doboz.innerHTML+=i + " ";
         }
         }
+
+        function maradek()
+        {
+            for(let i=0;i<=100;i++)
+            {
+                let maradek = i % 7;
+                document.getElementById("szam" + maradek).innerHTML += i+" ";
+            }
+
+        }
+        
     </script>
 </body>
-</html>
-
-szamok ki iratasa 100ig
+<!-- szamok ki iratasa 100ig
 ket jegyu pozitif szamok
 1000-nel kisebb 5-tel oszthato pozitiv egesz szamok
 
@@ -79,4 +95,22 @@ uj div, ciklus, ami 10-tol 0ig irja ki a szamokat
 masik ciklus ami ebbe a blokkba irjon amjd ami 0-tol 10-ig megy, legyen benne a 10 is
 ciklus 0-tol 10ig megy legyen benne a 10 is - visszafele szamolo szamsor 
 
-1000 alatti 5-tel oszthato szamok
+1000 alatti 5-tel oszthato szamok 
+
+4 uj div - id szam0, szam1, szam2, szam3
+         - h2 0 1 2 3
+         - 100ig elhelyezni a szamokat a divekbe
+            - 4-gyel osztva mennyi a maradeka
+                    pl 3 akkor a 3 feliratu divbe menjen, ha 2 akkor 2esbe, stb.....
+        uj ciklus ami vegigmegy az osszes szamon 0-tol 100-ig. A ciklus belsejeben megkell szerezni h mennyi a maradek
+                            - szamot (i) % jellel elosztom 4-gyel. Az erteket eltarolni valtozoban.
+                            - div megszerzese amibe irni akarok (a maradekosok)
+                                    div id - szam szo es a maradek szammal
+                                    pl for let maradek = i % 4;
+                                                doc.getelementbyid(szam+maradek.innerhtml i % 4)
+
+        aztan atalakitani hogy 7 reszre valogassa a szamokat
+            - magyaran 7 div kell osszesen
+-->
+</html>
+
