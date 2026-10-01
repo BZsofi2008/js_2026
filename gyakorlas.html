@@ -5,22 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gyakorlas</title>
 </head>
-<body onload="feladat1()">
+<body onload="feladat1(); feladat2(); feladat3(); feladat100(); feladat4()">
     <div id="feladat1"></div>
+    <div id="feladat2"></div>
+    <div id="feladat100"></div>
+    <div id="feladat3"></div>
+    <div id="feladat4"></div>
+
+
 
     <script>
-
         function feladat1()
         {
             let doboz=document.getElementById("feladat1");
 
-            for(let szam = 0;szam < 10; szam++)
+            for(let szam=0;szam<10;szam++)
             {
-                doboz.innerHTML+=szam;
+                doboz.innerHTML+=szam + " ";
             }
 
         }
 
+        function feladat100()
+        {
+            let doboz=document.getElementById("feladat100");
+
+            for(let i=0;i<=100;i++)
+            {
+                doboz.innerHTML+=i + " ";
+            }
+
+        }
+
+        function feladat2()
+        {
+            let vissza = document.getElementById("feladat2");
+
+            for(let i=10;i>=0;i--)
+            {
+                vissza.innerHTML+=i + " ";
+            }
+        }
+
+        function feladat3()
+        {
+            let masodik = document.getElementById("feladat3");
+
+            for(let valami=0;valami<=10;valami++)
+            {
+                masodik.innerHTML+=valami + " ";
+            }
+        }
+
+        function feladat4()
+        {
+            let doboz = document.getElementById("feladat4")
+            for(let i=0;i<i++)
+        {
+            doboz.innerHTML+=i
+        }
+        }
     </script>
 </body>
 </html>
@@ -28,3 +72,11 @@
 szamok ki iratasa 100ig
 ket jegyu pozitif szamok
 1000-nel kisebb 5-tel oszthato pozitiv egesz szamok
+
+uj div amiben meglesz jelenitve 
+uj div, ciklus, ami 10-tol 0ig irja ki a szamokat
+
+masik ciklus ami ebbe a blokkba irjon amjd ami 0-tol 10-ig megy, legyen benne a 10 is
+ciklus 0-tol 10ig megy legyen benne a 10 is - visszafele szamolo szamsor 
+
+1000 alatti 5-tel oszthato szamok
