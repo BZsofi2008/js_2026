@@ -5,18 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gyak3</title>
 </head>
-<body>
-    <input type="number" id="">
-    <button onclick="gyak3()"></button>
+<body onload="csinald()">
+    <label for="szam1">elso szam</label>
+    <input type="number" id="szam1"> <br><br>
+
+    <label for="szam2">maosdik szam</label>
+    <input type="number" id="szam2"> <br><br>
+
+    <button type="button" onclick="csinald()">elkuld</button> <br><br>
+
+    <div id="szamok">szamok megjelenitese: </div>
 
     <script>
-        function gyak3()
+        function csinald()
         {
-            
+            let sz1 = document.getElementById("szam1").value;
+            let sz2 = document.getElementById("szam2").value;
+            sz1 = parseInt(sz1);
+            sz2 = parseInt(sz2);
+
+            console.log(sz1, sz2);
+
+            let divSzamok = document.getElementById("szamok");
+            for(let i=sz1;i<sz2;i++)
+            {
+                divSzamok.innerHTML += i+", ";
+            }
+
+            for(let i=sz2;i<sz1;i++)
+            {
+                divSzamok.innerHTML += i+", ";
+            }
         }
     </script>
 </body>
 </html>
 
 
-button, input 2 db,
+<!--button, input 2 db, ket szam kozotti szam(ok) megjelenitese az inputbol--> 
+<!--uj div szamok nevvel. itt jelennek majd meg a szamok. Kell neki egy uj let-es fuggveny-->
