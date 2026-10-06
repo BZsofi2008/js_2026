@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>negyzetek</title>
+    <style>
+        .negyzet{
+            
+        }
+    </style>
 </head>
 <body>
+    <label for="szam1">szám 1</label>
+    <input type="number" id="szam1" min="1" max="100"> <br><br>
+    <button type="button" onclick="negyzet()">küldés</button> <br><br>
+    <div id="negyzet">négyzet(ek)</div>
     <script>
+        function negyzet()
+        {
+            let sz1 = document.getElementById("szam1").value;
+            sz1 = parseInt(sz1);
 
+            console.log(sz1)
+
+            let doboz = document.getElementById("negyzet")
+            for(i=1;i<=sz1;)
+                {
+                    negyzet.innerHTML
+                }
+            
+        }
     </script>
 </body>
 </html>
