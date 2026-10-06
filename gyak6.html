@@ -6,13 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <label for="szoveg">szöveg (vagy betű): </label>
+    <input type="text" id="szoveg"> <br><br>
 
+    <label for="szam">szám: </label>
+    <input type="number" id="szam"> <br><br>
+
+    <button type="button" onclick="megjelenites()">küldés</button>
+
+    <div id="osszeg" style="color: green;"></div>
+    <script>
+        function megjelenites()
+        {
+            let szov = document.getElementById("szoveg").value;
+            console.log(szov)
+
+            let sz = document.getElementById("szam").value;
+            sz = parseInt(sz);
+            console.log(sz);
+
+            for(let i=0;i<=sz;i++)
+                {
+                    osszeg.innerHTML += szov + " ";
+                }
+        }
     </script>
 </body>
 </html>
 
-<!--egy szoveg bekerese v betu bekerese es egy szamot. 
+<!--egy szoveg bekerese (v betu bekerese) es egy szam bekerese. 
 Az oldalban meg kell jeleniteni annyiszor egymas utan amennyi a szam. 
 A szoveg szine legyen zold
 
