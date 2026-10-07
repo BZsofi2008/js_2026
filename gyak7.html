@@ -12,6 +12,7 @@
     <button type="button" onclick="teglalap()">küld</button><br><br>
 
     <!-- <div id="megjelenites" style=" width: 75px; height: 50px; background-color: lightblue; border: 1px solid black;"></div> -->
+    <div id="alap"></div>
 
     <script>
         function teglalap()
@@ -20,10 +21,20 @@
             sz = parseInt(sz);
             console.log(sz);
 
+            for(let i=0;i<=sz;i++)
+                {
+                    var div = document.createElement("div");
+                    div.style.width = "75px";
+                    div.style.height = "50px";
+                    div.style.background = "lightblue";
+                    div.style.border = "solid black";
+                    div.style.borderRadius = "1px";
+                    document.getElementById("alap").appendChild(div);
+                }
 
-            const tlap = document.createElement("div");
-            tlap.innerHTML = szam;
-            document.body.appendChild(tlap)
+
+            /* tlap.innerHTML = szam;
+            document.body.appendChild(tlap) */
             
             
             /* sz.innerText = sz;
