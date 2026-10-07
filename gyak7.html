@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teglalap</title>
+</head>
+
+<body onload="teglalap()">
+    <label for="szam">szám: </label>
+    <input type="number" id="szam">
+    <button type="button" onclick="teglalap()">küld</button><br><br>
+
+    <div id="megjelenites" style="padding: 50px; width: 75px; height: 50px; background-color: lightblue; border: 1px solid black;"></div>
+
+    <script>
+        function teglalap()
+        {
+            const sz = document.createElement("number");
+            sz.innerText = parseInt(sz);
+            console.log(sz);
+
+            document.body.appendChild(sz);
+        }
+    </script>
+</body>
+</html>
+
+<!--createElement-es cuccal
+    egy szam bekerese es jelenitsd meg egy 75x50-es kek teglalapban aminek fekete kerete van
+    annyiszor jelenitsd meg azt a szamot amennyi a szam - egymas mellett legyenek (1=1 ha 5 akkor 5)
+
+-->
