@@ -11,16 +11,19 @@
     <input type="number" id="szam">
     <button type="button" onclick="teglalap()">küld</button><br><br>
 
-    <div id="megjelenites" style="padding: 50px; width: 75px; height: 50px; background-color: lightblue; border: 1px solid black;"></div>
+    <div id="megjelenites" style=" width: 75px; height: 50px; background-color: lightblue; border: 1px solid black;"></div>
 
     <script>
         function teglalap()
         {
-            const sz = document.createElement("number");
-            sz.innerText = parseInt(sz);
+            const tlap = document.createElement("div");
+            tlap.innerHTML = "";
+            
+            
+            /* sz.innerText = sz;
             console.log(sz);
 
-            document.body.appendChild(sz);
+            document.body.appendChild(sz); */
         }
     </script>
 </body>
