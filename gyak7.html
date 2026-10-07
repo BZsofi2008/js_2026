@@ -11,13 +11,19 @@
     <input type="number" id="szam">
     <button type="button" onclick="teglalap()">küld</button><br><br>
 
-    <div id="megjelenites" style=" width: 75px; height: 50px; background-color: lightblue; border: 1px solid black;"></div>
+    <!-- <div id="megjelenites" style=" width: 75px; height: 50px; background-color: lightblue; border: 1px solid black;"></div> -->
 
     <script>
         function teglalap()
         {
+            let sz = document.getElementById("szam").value;
+            sz = parseInt(sz);
+            console.log(sz);
+
+
             const tlap = document.createElement("div");
-            tlap.innerHTML = "";
+            tlap.innerHTML = szam;
+            document.body.appendChild(tlap)
             
             
             /* sz.innerText = sz;
@@ -28,6 +34,7 @@
     </script>
 </body>
 </html>
+
 
 <!--createElement-es cuccal
     egy szam bekerese es jelenitsd meg egy 75x50-es kek teglalapban aminek fekete kerete van
