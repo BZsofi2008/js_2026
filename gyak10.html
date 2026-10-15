@@ -7,11 +7,33 @@
 </head>
 <body>
     <label for="szam"></label>
-    <input type="number" name="" id="szam">
+    <input type="number" id="szam"> <br><br>
 
     <label for="szam1"></label>
-    <input type="number" name="" id="szam1">
+    <input type="number" id="szam1">
+
+    <button type="button" onclick="megjelenites()">küld</button>
+
+    <div id="szamJelenites"></div>
     <script>
+        function megjelenites()
+        {
+            let sz = document.getElementById("szam").value;
+            sz = parseInt(sz);
+            console.log(sz)
+
+            let sz1 = document.getElementById("szam1").value;
+            sz1 = parseInt(sz1);
+            console.log(sz1)
+
+            let osszeg = 0;
+            for(let i=sz;i<=sz1;i++)
+                {
+                    osszeg += osszeg + i 
+                }
+
+            document.getElementById("szamJelenites") 
+        }
 
     </script>
 </body>
