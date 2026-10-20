@@ -6,10 +6,84 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <label for="szam1">Első szám: </label>
+    <input type="number" id="szam1"> <br><br>
 
+    <label for="szam2">Második szám: </label>
+    <input type="number" id="szam2"> <br><br>
+
+    <button type="button" onclick="szamolgatas()">Küld</button> <br><br>
+
+    <table style="border: solid black 2px;">
+        <tr>
+            <td id="elsoSzam1"> </td>
+            <td>+</td>
+            <td id="masodikSzam1"> </td>
+            <td>=</td>
+            <td id="eredmeny1"> </td>
+        </tr>
+        <tr>
+            <td  id="elsoSzam2"> </td>
+            <td>-</td>
+            <td id="masodikSzam2"> </td>
+            <td>=</td>
+            <td id="eredmeny2"> </td>
+        </tr>
+        <tr>
+            <td id="elsoSzam3"> </td>
+            <td>*</td>
+            <td id="masodikSzam3"> </td>
+            <td>=</td>
+            <td id="eredmeny3"> </td>
+        </tr>
+        <tr>
+            <td id="elsoSzam4"> </td>
+            <td>/</td>
+            <td id="masodikSzam4"> </td>
+            <td>=</td>
+            <td id="eredmeny4"> </td>
+        </tr>
+    </table>
+
+    <script>
+        function szamolgatas()
+        {
+            let sz1 = document.getElementById("szam1").value;
+            sz1 = parseInt(sz1);
+            console.log(sz1);
+
+            let sz2 = document.getElementById("szam2").value;
+            sz2 = parseInt(sz2);
+            console.log(sz2);
+
+            // ossze adas
+            document.getElementById("elsoSzam1").innerHTML = sz1;
+            document.getElementById("masodikSzam1").innerHTML = sz2;
+            document.getElementById("eredmeny1").innerHTML = sz1 + sz2;
+
+            // kivonas
+            document.getElementById("elsoSzam2").innerHTML = sz1;
+            document.getElementById("masodikSzam2").innerHTML = sz2;
+            document.getElementById("eredmeny2").innerHTML = sz1 - sz2;
+
+            // szorzas
+            document.getElementById("elsoSzam3").innerHTML = sz1;
+            document.getElementById("masodikSzam3").innerHTML = sz2;
+            document.getElementById("eredmeny3").innerHTML = sz1 * sz2;
+            // osztas
+            document.getElementById("elsoSzam4").innerHTML = sz1;
+            document.getElementById("masodikSzam4").innerHTML = sz2;
+            document.getElementById("eredmeny4").innerHTML = sz1 / sz2;            
+        }
     </script>
 </body>
 </html>
 
-<!--  -->
+<!-- ket szam bekeres. Csinalni ala egy tablazatot, ami 4x5-os. 
+        Elso oszlop a szam 1, masodik a muveleti jel, harmadik a szam2, negyedik egy = jel otodik az eredmeny -->
+
+
+<!-- 
+        
+
+-->
