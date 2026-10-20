@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="szam1">Első szám: </label>
+    <input type="number" id="szam1"> <br><br>
+
+    <label for="szam2">Második szám: </label>
+    <input type="number" id="szam2"> <br><br>
+
+    <button type="button" onclick="szamolgatas()">Számol</button> <br><br>
+
+    <table id="eredmenyek" style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <td class="elsoSzam"></td>
+            <td>+</td>
+            <td class="masodikSzam"></td>
+            <td>=</td>
+            <td id="eredmeny"></td>
+        </tr>
+            <tr>
+            <td class="elsoSzam"></td>
+            <td>-</td>
+            <td class="masodikSzam"></td>
+            <td>=</td>
+            <td id="eredmeny1"></td>
+        </tr>
+            <tr>
+            <td class="elsoSzam"></td>
+            <td>*</td>
+            <td class="masodikSzam"></td>
+            <td>=</td>
+            <td id="eredmeny2"></td>
+        </tr>
+            <tr>
+            <td class="elsoSzam"></td>
+            <td>/</td>
+            <td class="masodikSzam"></td>
+            <td>=</td>
+            <td id="eredmeny3"></td>
+        </tr>
+    </table>
+
+    <script>
+        function szamolgatas()
+        {
+            let sz1 = parseInt(document.getElementById("szam1").value);
+            let sz2 = parseInt(document.getElementById("szam2").value);
+            console.log(sz1, sz2);
+
+            let elsoSzamok = document.querySelectorAll(".elsoSzam");
+            for(let i=0;i<elsoSzamok.length,i++;)
+            {
+                elsoSzamok[i].innerHTML = szam1;
+            }
+
+            let masodikSzamok = document.querySelectorAll(".masodikSzam");
+            for(let i=0;i<masodikSzamok.length,i++;)
+            {
+                masodikSzamok[i].innerHTML = 1;
+            }
+
+            document.getElementById("eredmeny").innerHTML = szam1 + szam2;
+        }
+
+
+    </script>
+</body>
+</html>
