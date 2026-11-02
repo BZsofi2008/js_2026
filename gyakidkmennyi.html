@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="szam1">Első szám: </label> 
+    <input type="number" id="szam1"> <br><br>
+
+    <label for="szam2">Második szám: </label>
+    <input type="number" id="szam2"> <br><br>
+
+    <button type="button" onclick="szamolas()">katt</button>
+
+    <div id="megjelenitettSzam"></div>
+    <script>
+        function szamolas()
+        {
+            let sz1 = parseInt(document.getElementById("szam1").value);
+            let sz2 = parseInt(document.getElementById("szam2").value);
+            // console.log(sz1, sz2);
+
+            let megjelenitettSzam = document.getElementById("megjelenitettSzam");
+            if (sz1<=sz2)
+            {
+                megjelenitettSzam.innerHTML =  Math.floor(Math.random() * (sz1 - sz2) + sz2);
+            } else
+            {
+                megjelenitettSzam.innerHTML =  Math.floor(Math.random() * (sz2 - sz1) + sz1);
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+<!-- 2 szam bekeres es a ketto szam kozott egy veletlenszamot legeneralni gombnyomasra 
+    teszteles: - irni hozza dokumentaltan teszt eseteket h milyen inputtal probalnank ki es milyen valaszt varunk
+               - leirni h jo-e v nem
+               - dokumentalni a hibat
+-->
