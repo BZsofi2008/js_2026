@@ -1,0 +1,1 @@
+szam1, szam2 input ellenorzese: console loggal megjelenitetni a szamokat - mukodik
