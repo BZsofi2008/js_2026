@@ -1,4 +1,4 @@
 szam1, szam2 input ellenorzese: console loggal megjelenitetni a szamokat - mukodik
 pozitiv es negativ szamokkal is mukodik
 a betuket nem adogatja ossze - mert nem szamok
-emojikat sem
+emojikat sem 
