@@ -2,3 +2,4 @@ szam1, szam2 input ellenorzese: console loggal megjelenitetni a szamokat - mukod
 pozitiv es negativ szamokkal is mukodik
 a betuket nem adogatja ossze - mert nem szamok
 emojikat sem 
+*, :, ;, _, /, +, !, ÷ jelek esetén nem számként fogja fel az értéket a program
