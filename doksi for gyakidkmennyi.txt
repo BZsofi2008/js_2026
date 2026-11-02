@@ -2,7 +2,11 @@ szam1, szam2 input ellenőrzése: console loggal megjelenítetni a számokat - m
 
 szam1, szam2 közötti random egész számokat megtudja jeleníteni a div
 
-pozitív és negatív számokkal is működik
+pozitív és negatív egész számokkal is működik
+
+törtszámoknál az első számot jeleníti meg, nem kerekít
+
+üres input esetén nem ír számot, helyette azt írja, hogy NaN (not a number)
 
 a betűket nem adogatja össze - mert nem számok
 
