@@ -20,14 +20,17 @@
     <script>
         function szamolas(){
             let sz = parseInt(document.getElementById("szam").value);
-            console.log(sz)
+            console.log(sz);
 
-            let megjelenitettSzam = document.getElementById("megjelenitettSzam");
-            Math.floor(Math.random() * (9 - 0 + 1)) + 0;
+            if(sz>=0, sz<10)
+            {
+                megjelenitettSzam.innerHTML = Math.floor(Math.random() * 9 * 10 **(sz - 1 )) + 10 **(sz - 1);
+            }
+            else
+            {
+                megjelenitettSzam.innerHTML = "false";
+            }
 
-            Math.floor(Math.random() * (999 - 100 + 1)) + 100;
-
-            Math.floor(Math.random() * (99999999 - 10000000 + 10000000)) + 10000000;
         }
     </script>
 </body>
@@ -42,3 +45,10 @@
      ranodm(3)-> 100,999
      random(8)-> 10000000,99999999
      -->
+
+<!--            Math.floor(Math.random() * (9 - 0 + 1)) + 0;
+
+            Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+
+            Math.floor(Math.random() * (99999999 - 10000000 + 10000000)) + 10000000;
+-->
