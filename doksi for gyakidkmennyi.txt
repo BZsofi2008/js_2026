@@ -1,1 +1,18 @@
-szam1, szam2 input ellenorzese: console loggal megjelenitetni a szamokat - mukodik
+szam1, szam2 input ellenőrzése: console loggal megjelenítetni a számokat - működik
+
+szam1, szam2 közötti random egész számokat megtudja jeleníteni a div
+
+pozitív és negatív egész számokkal is működik
+
+törtszámoknál az első számot jeleníti meg, nem kerekít
+
+üres input esetén nem ír számot, helyette azt írja, hogy NaN (not a number)
+
+a betűket nem adogatja össze - mert nem számok
+
+emojikat sem 
+
+*, :, ;, _, /, +, !, ÷ jelek esetén nem számként fogja fel az értéket a program
+
+ha a felhasználó be írja h sz1=120 sz2=30 akkor semmiképpen nem fog neki 
+kijönni 120 utáni és 30 előtti szám, mert az nincs benne a tartományban
