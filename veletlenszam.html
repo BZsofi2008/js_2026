@@ -8,7 +8,7 @@
 <body>
     <form action="">
         <fieldset>
-            <label for="szam">Szám megadása: </label>
+            <label for="szam">Mennyi jegyű véletlenszerű számot jelenítsek meg? </label>
             <input type="number" id="szam">
         </fieldset> <br><br>
 
@@ -22,7 +22,7 @@
             let sz = parseInt(document.getElementById("szam").value);
             console.log(sz);
 
-            if(sz>=0, sz<=10)
+            if(sz>0 && sz<=10)
             {
                 megjelenitettSzam.innerHTML = Math.floor(Math.random() * 9 * 10 **(sz - 1 )) + 10 **(sz - 1);
             }
