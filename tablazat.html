@@ -4,15 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
+    <h1>Lottószámok</h1> <br><br>
+    <table>
+        <thead>
+            <th>A hét száma</th>
+            <th>Első szám</th>
+            <th>Második szám</th>
+            <th>Harmadik szám</th>
+            <th>Negyedik szám</th>
+            <th>Ötödik szám</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>13</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>65</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>12</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>21</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
     <script>
         function lotto(){
-
+            Math.floor(Math.random()); 
         }
     </script>
 </body>
 </html>
 
 <!-- tablazat, amiben megjelenik az ev osszes 5-os lottoszama - random szamok legyenek
-     52 het -->
+     52 het adatait kell megjeleniteni a tablazatban 
+     elso oszlop tartalmazza a hetek szamait (1. hét, 2. hét, stb..)
+     legkisebb szam 1, legnagyobb a 90 - veletlenszamok 1 es 90 kozott lehetnek generalva -->
+
+<!-- mit hogyan
+     1. ures html
+     2. h1-es cim - Lottoszamok
+     3. tablazat uresen - table, thead, th (theadben) - a het szama legyen
+     4. tbody, th van benne - ez a het szamat tartalmazza, amit kilehet szamolni a ciklus valtozobol 
+     5. td - veletlenszam 1 es 90 kozott
+        td - veletlenszam 1 es 90 kozott
+        td - veletlenszam 1 es 90 kozott
+        td - veletlenszam 1 es 90 kozott
+        td - veletlenszam 1 es 90 kozott 
+     6. tbodyra majd vhogy hivatkozni kell - vmi id-vel 
+     7. script: fuggveny ami veletlenszamot csinal 1 es 90 kozott 
+     8. ciklus ami 52x lefut - a ciklus belsejeben bele kell szurni egy sort a tbody-ba  
+     td-ben a fuggveny altal vissza adott szam szerepel, ami 5 lefut - erre is kell fuggveny 
+     9. egy valtozoba osszegyujteni ezeket, aztan utana beletenni a tbody-ba 
+     10. tablazat cellainak keret -->
