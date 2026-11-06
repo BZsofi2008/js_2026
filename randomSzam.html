@@ -6,18 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="szam">Szám 0 és 100 között</label>
+    <label for="szam">Szám 0 és 100 között: </label>
     <input type="number" id="szam"> <br><br>
 
     <button type="button" onclick="szamok()">Katt</button>
 
+    <div id="uzenet"></div>
+
     <script>
         function szamok(){
             let ertek = parseInt(document.getElementById("szam").value);
-            console.log(ertek);
+            // console.log(ertek);
 
-            Math.floor(Math.random() * 100) +1; 
-        }
+            const szamok = [];
+            if(ertek<0 || ertek>100)
+            {
+                document.getElementById("uzenet").innerHTML = "HIBA";
+                return i;
+            }
+
+            for(let i=0;i<ertek;i++)
+            {
+                szamok.push(Math.floor(Math.random() * 100) +1)
+            }
+            console.log(szamok) // teszt
+
+            function random()
+            {
+                return Math.floor(Mat.random() * 100);
+            }
+
+            let szoveg = "<ul>";
+            for(let i=0;i<szamok.length;i++)
+            {
+                szoveg += "<li>" +szamok[i]+ "</li>"
+            }
+            szoveg += "</ul>";
+
+            document.getElementById("uzenet").innerHTML = szoveg;
+        } 
     </script>
 </body>
 </html>
