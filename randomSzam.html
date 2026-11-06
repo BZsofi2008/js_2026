@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="szam">Szám 0 és 100 között</label>
+    <input type="number" id="szam"> <br><br>
+
+    <button type="button" onclick="szamok()">Katt</button>
+
+    <script>
+        function szamok(){
+            let ertek = parseInt(document.getElementById("szam").value);
+            console.log(ertek);
+
+            Math.floor(Math.random() * 100) +1; 
+        }
+    </script>
+</body>
+</html>
+
+<!-- egy szam bekeresere szolgalo urlap. A bekeres utan vizsgalni kell h 0 es 100 kozotti-e a szam. Ha nem, akkor egy helyen jelenjen meg a 
+ "nem megfelelo szam" hibauzenet.
+ ha jo ( azaz 0 es 100 kozotti) akkor egy tombbe kesziteni annyi random szamot amennyi a szam, majd a tombbol egy listat.
+ A listat meg kell jelenieni a hibauzenettel azonos helyen. -->
+
+<!-- 
+ let ertek = parsInt(doc.getelementbyid)
+ const szamok=[]
+ szamok.push(ertek)
+ szamok[i] -->
