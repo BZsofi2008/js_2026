@@ -6,10 +6,60 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <label for="szam1">Első szám</label> 
+    <input type="number" id="szam1"> <br><br>
 
+    <label for="szam2">Második szám</label>
+    <input type="number" id="szam2"> <br><br>
+
+    <label for="szam3">Harmadik szám</label>
+    <input type="number" id="szam3"> <br><br>
+
+    <button type="button" onclick="haromszog()">Küld</button>
+
+    <div id="uzenet"></div>
+    <div id="derekszog"></div>
+
+    <script>
+        function haromszog()
+        {
+            let sz1 = parseInt(document.getElementById("szam1").value);
+            let sz2 = parseInt(document.getElementById("szam2").value);
+            let sz3 = parseInt(document.getElementById("szam3").value);
+            console.log(sz1, sz2, sz3);
+
+            const szamok = [];
+            if(sz1+sz2<sz3 || sz1+sz3<sz2 || sz2+sz3<sz1) //sima haromszog
+                {
+                    document.getElementById("uzenet").innerHTML = "lehet haromszog";
+                }
+            else
+                {
+                    document.getElementById("uzenet").innerHTML = "nem lehet haromszog";                  
+                }
+
+            console.log(Math.max(sz1, sz2, sz3));
+
+            let derekszogu = false; //derekszogu
+            let haromszog = false;
+            if(Math.max(sz1, sz2, sz3) == sz1)
+                {
+                    derekszogu = sz1**2 == sz2**2 + sz3**2;
+                    document.getElementById("derekszog").innerHTML = "lehet derekszogu haromszog";   
+                }
+            else if(Math.max(sz1, sz2, sz3) == sz2)
+                {
+                    derekszogu = sz2**2 == sz1**2 + sz3**2;
+                    document.getElementById("derekszog").innerHTML = "lehet derekszogu haromszog"; 
+                }
+            else
+                {
+                    document.getElementById("derekszog").innerHTML = "nm lehet derekszogu haromszog"; 
+                }
+        }
     </script>
 </body>
 </html>
 
-<!--  -->
+<!-- weboldal, amely 3 bekert oldalhosszbol eldonti h lehet-e haromszog, lehet e derekszogu haromszog.
+     a bekert adatokat elmenteni egy tombbe -->
