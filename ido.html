@@ -9,9 +9,11 @@
     <button type="button" onclick="ido()">Kattintgatás itt!</button>
 
     <div id="uzenet"></div>
+    <div id="uzenet2"></div>
 
     <script>
         const idok = [];
+
         function ido()
         {
             console.log("gfsegfg")
@@ -23,9 +25,13 @@
 
             /* const masikIdo = new Date();
             d.setHours(10, 25, 42);
-            document.getElementById("uzenet").innerHTML = d; */ 
+            document.getElementById("uzenet").innerHTML = d; */     // elkurt, mashogy gondolt resz - igy ne csinald
 
             document.getElementById("uzenet").innerHTML = d.getHours() + " óra " + d.getMinutes() + " perc " + d.getSeconds() + " másodperc ";
+
+            idok.push(d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds() + "")
+            document.getElementById("uzenet2").innerHTML = idok;
+            console.log(idok);
         }
     </script>
 </body>
