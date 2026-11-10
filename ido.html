@@ -11,6 +11,8 @@
     <div id="uzenet"></div>
     <div id="uzenet2"></div>
 
+    <div id="ora"></div>
+
     <script>
         const idok = [];
 
@@ -33,6 +35,19 @@
             document.getElementById("uzenet2").innerHTML = idok;
             console.log(idok);
         }
+
+        function pontosIdo()
+        {
+            const d = new Date();
+            return d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds() + "";           
+        }
+
+        function ora()
+        {
+            document.getElementById("ora").innerHTML += pontosIdo();
+        }
+
+        setInterval(ora, 1000);
     </script>
 </body>
 </html>
