@@ -11,12 +11,26 @@
     <div id="uzenet"></div>
 
     <script>
+        const idok = [];
         function ido()
         {
-            
+            console.log("gfsegfg")
+
+            const d = new Date();
+            document.getElementById("uzenet").innerHTML = d;
+
+            console.log(d.getHours(), d.getSeconds());
+
+            /* const masikIdo = new Date();
+            d.setHours(10, 25, 42);
+            document.getElementById("uzenet").innerHTML = d; */ 
+
+            document.getElementById("uzenet").innerHTML = d.getHours() + " óra " + d.getMinutes() + " perc " + d.getSeconds() + " másodperc ";
         }
     </script>
 </body>
 </html>
 
 <!-- kattintas kozotti idok merese. Legkevesebb ki irasa -->
+
+<!-- 10 25 42 -->
