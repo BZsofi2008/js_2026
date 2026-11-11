@@ -14,7 +14,8 @@
 
     <script>
         const idok = [];
-
+        let utolsoIdo = 0;
+        
         function timestamp()
         {
             console.log("asdasdas");
@@ -22,7 +23,7 @@
             const d = new Date();
             document.getElementById("uzenet").innerHTML = d.getTime();
 
-            idok.push(d.getTime());
+            idok.push(d.getTime() - utolsoIdo);
             console.log(idok);
 
             let lista = document.getElementById("lista");
@@ -33,6 +34,8 @@
                 {
                     document.getElementById("lista").innerHTML = "<li>" + idok[i] + "</li>" + document.getElementById("lista").innerHTML;
                 }
+
+            utolsoIdo = d.getTime();
         }
     </script>
 </body>
@@ -40,8 +43,8 @@
 
 
 <!-- uj feladat. 
-     Program, ami gombnyomasra megjeleniti az aktualis idobelyeget. ✅
-     Tombbe osszegyujteni ezt az idobelyeget                        ✅
-     Megjeleniteni egy listaban az osszes idobelyeget (timestamp)   ✅
-     A legfrissebb legyen felul
-     Ne a timestamp, hanem az elozohoz kepest a timestampek kulonbsege legyen megjelenitve -->
+     Program, ami gombnyomasra megjeleniti az aktualis idobelyeget.                             ✅
+     Tombbe osszegyujteni ezt az idobelyeget                                                    ✅
+     Megjeleniteni egy listaban az osszes idobelyeget (timestamp)                               ✅
+     A legfrissebb legyen felul                                                                 ✅
+     Ne a timestamp, hanem az elozohoz kepest a timestampek kulonbsege legyen megjelenitve -->  
