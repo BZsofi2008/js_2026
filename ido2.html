@@ -23,8 +23,12 @@
             const d = new Date();
             document.getElementById("uzenet").innerHTML = d.getTime();
 
-            idok.push(d.getTime() - utolsoIdo);
+            if(idok.push(d.getTime() - utolsoIdo))
+            {
+                utolsoIdo !== 0
+            }
             console.log(idok);
+
 
             let lista = document.getElementById("lista");
             lista.innerHTML = " ";
