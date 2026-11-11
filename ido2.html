@@ -8,10 +8,31 @@
 <body>
     <button type="button" onclick="timestamp()">Kattintgatás ide</button>
 
+    <div id="uzenet"></div>
+
+    <ul id="lista"></ul>
+
     <script>
+        const idok = [];
+
         function timestamp()
         {
+            console.log("asdasdas");
 
+            const d = new Date();
+            document.getElementById("uzenet").innerHTML = d.getTime();
+
+            idok.push(d.getTime());
+            console.log(idok);
+
+            let lista = document.getElementById("lista");
+            lista.innerHTML = " ";
+            // a = "szo" + a;
+
+            for(let i=0;i<idok.length;i++)
+                {
+                    document.getElementById("lista").innerHTML = "<li>" + idok[i] + "</li>" + document.getElementById("lista").innerHTML;
+                }
         }
     </script>
 </body>
@@ -19,8 +40,8 @@
 
 
 <!-- uj feladat. 
-     Program, ami gombnyomasra megjeleniti az aktualis idobelyeget.
-     Tombbe osszegyujteni ezt az idobelyeget
-     Megjeleniteni egy listaban az osszes idobelyeget (timestamp) 
+     Program, ami gombnyomasra megjeleniti az aktualis idobelyeget. ✅
+     Tombbe osszegyujteni ezt az idobelyeget                        ✅
+     Megjeleniteni egy listaban az osszes idobelyeget (timestamp)   ✅
      A legfrissebb legyen felul
      Ne a timestamp, hanem az elozohoz kepest a timestampek kulonbsege legyen megjelenitve -->
