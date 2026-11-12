@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" onclick="szamok()">Katt ide</button>
+    <button type="button" onclick="random()">Katt ide</button>
 
     <table id="doboz">
 
@@ -26,9 +26,9 @@
         {
             szamok.push(random())
             console.log(szamok);
-            
-            // let tablazat = "<tr> <th> "+i+". </th> <td> "+szamok()+" </td> </tr>"
-            // document.getElementById("doboz").innerHTML += tablazat;
+
+            let tablazat = "<tr> <th> "+i+". </th> <td> "+random()+" </td> </tr>"
+            document.getElementById("doboz").innerHTML += tablazat;
         }
     </script>
 </body>
