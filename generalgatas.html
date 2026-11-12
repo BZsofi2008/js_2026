@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" onclick="random()">Katt ide</button>
+    <!-- <button type="button" onclick="random()">Katt ide</button> -->
 
-    <table id="doboz">
+    <table id="tabla">
 
     </table>
 
@@ -22,14 +22,21 @@
         }
 
         const szamok = [];
+
         for(let i=0;i<20;i++)
         {
             szamok.push(random())
-            console.log(szamok);
 
-            let tablazat = "<tr> <th> "+i+". </th> <td> "+random()+" </td> </tr>"
-            document.getElementById("doboz").innerHTML += tablazat;
+            //let tablazat = "<tr> <td> "+random()+" </td> </tr>"
+            // document.getElementById("tabla").innerHTML += tablazat;
         }
+        for(let i=0; i<szamok.length; i++)
+        {
+            console.log(szamok[i]);
+            // document.getElementById("tabla").innerHTML += tablazat            
+        }
+
+        console.log(szamok);
     </script>
 </body>
 </html>
