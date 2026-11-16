@@ -6,7 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Random számok 100-ig</h3>
+    <h3>Random számok 100-ig</h3> <br>
+    <div><span id="leg_kisebb"></span></div>    <br>
+    <div><span id="leg_nagyobb"></span></div>   <br>
+    <div><span id="atlag"></span></div>        <br>
+
     <table id="tabla">
 
     </table>
@@ -34,9 +38,30 @@
         }
 
         console.log(szamok);
+
+        //szelsoertek kereses, maximum
+
+        let legnagyobb = -1;
+        for(let i=0; i<szamok.length; i++)
+        {
+            if(szamok[i]>legnagyobb)
+            {
+                legnagyobb = szamok[i];
+            }
+        }
+        document.getElementById("leg_nagyobb").innerHTML = "A legnagyobb szám: " + legnagyobb;
+
+        let legkisebb = 100;
+        for(let i=0; i<szamok.length; i++)
+        {
+            if(szamok[i]<legkisebb)
+            {
+                legkisebb = szamok[i];
+            }
+        }
+        document.getElementById("leg_kisebb").innerHTML = "A legkisebb szám: " + legkisebb;
     </script>
 </body>
 </html>
-
 
 <!-- tablazat alatt vmilyen modon jelenjen meg a legkisebb, legangyobb szam meg az atlag -->
