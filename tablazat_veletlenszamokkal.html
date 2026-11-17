@@ -69,7 +69,14 @@
         document.getElementById("atlag").innerHTML = "Az átlag: " + osszeg;
 
         const parosok = [];
-        
+        for(let i=0; i<szamok.length; i++)
+        {
+            if(szamok[i] % 2 === 0)
+            {
+            parosok.push(szamok[i])
+            }
+        }
+
     </script>
 </body>
 </html>
