@@ -33,7 +33,7 @@
         {
             console.log(szamok[i]);
 
-            let tablazat = "<tr> <td>" +random()+ "</td> </tr>"
+            let tablazat = "<tr> <td>" +szamok[i]+ "</td> </tr>"
             document.getElementById("tabla").innerHTML += tablazat;
         }
 
@@ -41,7 +41,7 @@
 
         //szelsoertek kereses, maximum
 
-        let legnagyobb = -1;
+        let legnagyobb = -1; //max szam keresese
         for(let i=0; i<szamok.length; i++)
         {
             if(szamok[i]>legnagyobb)
@@ -51,7 +51,7 @@
         }
         document.getElementById("leg_nagyobb").innerHTML = "A legnagyobb szám: " + legnagyobb;
 
-        let legkisebb = 100;
+        let legkisebb = 100; //minimum szam keresese
         for(let i=0; i<szamok.length; i++)
         {
             if(szamok[i]<legkisebb)
@@ -60,6 +60,16 @@
             }
         }
         document.getElementById("leg_kisebb").innerHTML = "A legkisebb szám: " + legkisebb;
+
+        let osszeg = 0;
+        for(i=0; i<szamok.length; i++)
+        {
+            osszeg += szamok[i] / szamok.length;
+        }
+        document.getElementById("atlag").innerHTML = "Az átlag: " + osszeg;
+
+        const parosok = [];
+        
     </script>
 </body>
 </html>
