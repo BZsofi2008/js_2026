@@ -11,9 +11,33 @@
     <div><span id="leg_nagyobb"></span></div>   <br>
     <div><span id="atlag"></span></div>        <br>
 
-    <table id="tabla">
 
-    </table>
+    <div id="sok_tabla" style="display: flex; gap: 20px; align-items: start;">
+        <div>
+            <h2>Random számok</h2>
+            <table id="tabla" style="border: 1px solid black;">
+            </table>
+        </div>
+
+        <div>
+            <h2>Páros számok</h2>
+            <table id="tabla_masik" style="border: 1px solid black;">
+            </table>
+        </div>
+
+        <div>
+            <h2>Páratlan számok</h2>
+            <table id="tabla_paratlan" style="border: 1px solid black;">
+            </table>
+        </div>
+
+        <div>
+            <h2>7-tel osztható számok</h2>
+            <table id="tabla_hetes" style="border: 1px solid black;">
+            </table>
+        </div>
+    </div>
+
 
     <script>
         function random()
@@ -68,17 +92,56 @@
         }
         document.getElementById("atlag").innerHTML = "Az átlag: " + osszeg;
 
-        const parosok = [];
+        const parosok = []; //paros szamok ki irasa
+        const paratlan = []; //paratlanok
         for(let i=0; i<szamok.length; i++)
         {
-            if(szamok[i] % 2 === 0)
+            if(szamok[i] % 2 == 0)
             {
             parosok.push(szamok[i])
             }
+            else
+            {
+                if(szamok[i] % 2 !== 0)
+                paratlan.push(szamok[i])
+            }
         }
 
+        for(let i=0;i<parosok.length;i++)
+        {
+            console.log(parosok[i]);
+
+            let tablazat2 = "<tr> <td>" +parosok[i]+ "</td> </tr>"
+            document.getElementById("tabla_masik").innerHTML += tablazat2;
+        }
+        for(let i=0;i<paratlan.length;i++)
+        {
+            console.log(paratlan[i]);
+
+            let tablazat3 = "<tr> <td>" +paratlan[i]+ "</td> </tr>"
+            document.getElementById("tabla_paratlan").innerHTML += tablazat3;
+        }
+
+        const hetesek = []; //hettel oszthato
+        for(let i=0; i<szamok.length; i++)
+        {
+            if(szamok[i] % 7 == 0)
+            {
+            hetesek.push(szamok[i])
+            }
+        }
+        for(let i=0;i<hetesek.length;i++)
+        {
+            console.log(hetesek[i]);
+
+            let tablazat4 = "<tr> <td>" +hetesek[i]+ "</td> </tr>"
+            document.getElementById("tabla_hetes").innerHTML += tablazat4;
+        }
     </script>
 </body>
 </html>
 
 <!-- tablazat alatt vmilyen modon jelenjen meg a legkisebb, legangyobb szam meg az atlag -->
+ <!-- h2 tablazatok elott Random számok, Páros számok -->
+
+ <!-- 7-tel oszthato szamok-->
