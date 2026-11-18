@@ -36,6 +36,12 @@
             <table id="tabla_hetes" style="border: 1px solid black;">
             </table>
         </div>
+
+        <div>
+            <h2>vmi random</h2>
+            <table id="tabla_megegy" style="border: 1px solid black;">
+            </table>
+        </div>
     </div>
 
 
@@ -137,6 +143,18 @@
             let tablazat4 = "<tr> <td>" +hetesek[i]+ "</td> </tr>"
             document.getElementById("tabla_hetes").innerHTML += tablazat4;
         }
+
+        /* szamok.sort((a, b) => b-a); // tomb rendezes - callback fuggveny. Ez modosit vmit (idk)
+        console.log(szamok); */
+
+        let rendezett = szamok.toSorted((a,b) => a-b);
+        console.log(rendezett);
+        for(let i=0; i<rendezett.length; i++)
+        {
+            let tablazatMegEgy = "<tr> <td>" +rendezett[i]+ "</td> </tr>"
+            document.getElementById("tabla_megegy").innerHTML += tablazatMegEgy;
+        }
+
     </script>
 </body>
 </html>
@@ -145,3 +163,7 @@
  <!-- h2 tablazatok elott Random számok, Páros számok -->
 
  <!-- 7-tel oszthato szamok-->
+
+ <!-- rendezes: tomb rendezesek
+      sort fuggveny - a tomb fuggvenye ez
+      vmi callback -->
