@@ -9,8 +9,15 @@
     <h3>Random számok 100-ig</h3> <br>
     <div><span id="leg_kisebb"></span></div>    <br>
     <div><span id="leg_nagyobb"></span></div>   <br>
-    <div><span id="atlag"></span></div>        <br>
-    <div id="vanNincs"></div>
+    <div><span id="atlag"></span></div>         <br>
+    <div id="vanNincs"></div>                   <br>
+    <div id="indexes_ize"></div>                <br>
+
+    <h3>Felhasználói mező</h3>
+    <label for="bekeres">Milyen számot keressek 100-ig? </label>
+    <input type="number" id="bekeres">          <br>
+    <button type="button" onclick="bekeresesdi()">Katt</button>
+    <div id="masikIndexes_ize"></div>
 
     <div id="sok_tabla" style="display: flex; gap: 20px; align-items: start;">
         <div>
@@ -176,6 +183,33 @@
                 document.getElementById("vanNincs").innerHTML = "nincs benne";
             }
         }
+
+        let keresettIndex = -1; //42-es szam keresese
+        for(let i=0;i<szamok.length;i++)
+        {
+            if(szamok[i] === 42)
+            {
+                keresettIndex = i;
+                break
+            }
+        }
+        document.getElementById("indexes_ize").innerHTML = "A keresett elem a " + keresettIndex + ". helyen áll.";
+
+        function bekeresesdi() //falhazsnalo altali kereses
+        {
+            let sz1 = parseInt(document.getElementById("bekeres").value);
+            // console.log(sz1)
+            let keresettIndex2 = -1;
+            for(let i=0;i<szamok.length;i++)
+            {
+                if(szamok[i] === sz1)
+                {
+                    keresettIndex2 = i;
+                    break
+                }
+            }
+            document.getElementById("masikIndexes_ize").innerHTML = "A felhasználó által keresett elem a " + keresettIndex2 + ". helyen áll.";
+        }
     </script>
 </body>
 </html>
@@ -193,4 +227,10 @@
 
 <!-- feltetelnek megfelelo elem keresese - kivalasztas 
      feltel: a szam 42
+
+     ha megvan a keresett elem, akkor megjeleniteni h hanyadik indexnel(helyen) van - tomb indexe van hasznalva altalaban
+-->
+
+<!-- beviteli mezo ahol bekerjuk a szamot amit meg kell keresni (van e benne)
+     input kell majd!
 -->
