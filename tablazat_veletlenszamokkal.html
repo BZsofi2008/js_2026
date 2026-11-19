@@ -10,7 +10,7 @@
     <div><span id="leg_kisebb"></span></div>    <br>
     <div><span id="leg_nagyobb"></span></div>   <br>
     <div><span id="atlag"></span></div>        <br>
-
+    <div id="vanNincs"></div>
 
     <div id="sok_tabla" style="display: flex; gap: 20px; align-items: start;">
         <div>
@@ -43,7 +43,6 @@
             </table>
         </div>
     </div>
-
 
     <script>
         function random()
@@ -146,7 +145,6 @@
 
         /* szamok.sort((a, b) => b-a); // tomb rendezes - callback fuggveny. Ez modosit vmit (idk)
         console.log(szamok); */
-
         let rendezett = szamok.toSorted((a,b) => a-b);
         console.log(rendezett);
         for(let i=0; i<rendezett.length; i++)
@@ -155,6 +153,29 @@
             document.getElementById("tabla_megegy").innerHTML += tablazatMegEgy;
         }
 
+        let vanBenne = false; //42-es szam vizsgalasa h van-e
+        for(let i=0;i<szamok.length;i++)
+        {
+            if(szamok[i] === 42)
+            {
+                // console.log("van")
+                vanBenne = true;
+                break;
+            }
+        }
+        if(vanBenne === true)
+        {
+            console.log("van");
+            document.getElementById("vanNincs").innerHTML = "van benne";
+        }
+        else
+        {
+            if(vanBenne != true)
+            {
+                console.log("nincs");
+                document.getElementById("vanNincs").innerHTML = "nincs benne";
+            }
+        }
     </script>
 </body>
 </html>
@@ -168,6 +189,8 @@
       sort fuggveny - a tomb fuggvenye ez
       vmi callback -->
 
-
-
 <!-- https://www.w3schools.com/jsref/jsref_array_tosorted.asp -->
+
+<!-- feltetelnek megfelelo elem keresese - kivalasztas 
+     feltel: a szam 42
+-->
