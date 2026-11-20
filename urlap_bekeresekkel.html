@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="szam1">Kérem a számokat</label>
+    <input type="number" id="szam1"> <br>
+    <button type="button" onclick="bekeresesdi()">Katt</button> <br><br>
+    
+    <div>A legnagyobb szám: <span id="legnagyobbElem"></span></div>     <br>
+    <div>A legkisebb szám: <span id="legkisebbElem"></span></div>       <br>
+    <div>A számok darabszáma: <span id="darabszam"></span></div>        <br>
+    <div>A számok átlaga: <span id="atlag"></span></div>                <br>
+
+    <table id="tabla">
+    </table>
+
+    <script>
+        const szamok = [];
+        function bekeresesdi()
+        {
+            let szam = parseInt(document.getElementById("szam1").value);
+            szamok.push(szam);
+            console.log(szamok);
+
+            for(let i=0;i<szamok.length;i++)
+            {
+                let tablazat = "<tr><td>" + szamok[i] + "</td></tr>";
+                document.getElementById("tabla").innerHTML = tablazat
+            }
+
+            let legnagyobb = -1; 
+            for(let i=0; i<szamok.length; i++)
+            {
+                if(szamok[i]>legnagyobb)
+                {
+                    legnagyobb = szamok[i];
+                }
+            }
+            document.getElementById("legnagyobbElem").innerHTML = " " + legnagyobb;
+
+
+            let legkisebb = 100; 
+            for(let i=0; i<szamok.length; i++)
+            {
+                if(szamok[i]<legkisebb)
+                {
+                    legkisebb = szamok[i];
+                }
+            }
+            document.getElementById("legkisebbElem").innerHTML = " " + legkisebb;
+
+            let atlag = 0;
+            for(i=0; i<szamok.length; i++)
+            {
+                atlag += szamok[i] / szamok.length;
+            }
+            document.getElementById("atlag").innerHTML = " " + atlag;
+        }
+    </script>
+</body>
+</html>
+
+<!-- urlap ami szamokat ker be
+     a bekert szamokat tombben tarolni
+     azt urlap alatt jelenjen meg a legnagyobb elem     ✅
+                                    legkisebb elem      ✅
+                                    darabszam
+                                    atlag               ✅
+                                    tablazat            
+    alatta tablazatban az osszes szam a bekeres sorrendjeben - magyaran nem kell rendezni
+    bevitel utan az input mezobol tunjon el a szam
+-->
