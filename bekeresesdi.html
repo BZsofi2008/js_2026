@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="szam">Kérek egy számot: </label>
+    <input type="number" id="szam">
+    <button type="button" onclick="bekeresesdi()">Katt</button>
+
+    <div>3 legnagyobb szám: <span id="3legnagyobb"></span></div>
+
+    <table id="osszesSzam" style="border: solid black 1px;">
+    </table>
+
+    <table id="atlagKozeliSz" style="border:  solid black 1px;">
+    </table>
+
+    <script>
+        const szamok = [];
+        function bekeresesdi()
+        {
+            let sz = parseInt(document.getElementById("szam").value);
+            szamok.push(sz)
+            console.log(szamok)
+
+            let tabla1 = ""
+            for(let i=0;i<szamok.length;i++) 
+            {
+                tabla1 = "<tr><td>" + szamok[i] + "</td></tr>";
+            }
+                document.getElementById("osszesSzam").innerHTML += tabla1 
+
+            let legnagyobbak = szamok.toSorted((a,b) => b-a);
+            let legnagyobb3 = -1;
+            for(let i=0;i<szamok.length;i++)
+            {
+                if(szamok[i]>legnagyobb3)
+                {
+                    legnagyobb3 = szamok[i]
+                }
+            }
+            document.getElementById("3legnagyobb").innerHTML = legnagyobb3;
+
+            let atlag = 0
+            for(let i=0;i<szamok.length;i++)
+            {
+                atlag += szamok[i] / szamok.length;
+            }
+            document.getElementById("atlagKozeliSz").innerHTML = atlag;
+        }
+    </script>
+</body>
+</html>
+
+<!-- szam bekeres. 
+     ki iratni tablazatba a szamokat                ✅
+     3 legnagyobbat ki iratni
+     az atlaghoz legkozelebb eso 5 szam tablazatba 
+-->
