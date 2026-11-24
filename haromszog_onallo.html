@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="bekeres">Mennyi db háromszög legyen? </label>
+    <input type="number" id="bekeres">
+    <button type="button" onclick="haromSzam()">Katt!</button><br>
+
+    <table style="border: solid black 1px;">
+        <table id="osszesSzam" style="border: solid black 1px;">
+            <!-- <th>dasfads</th> -->
+        </table>
+
+        <table id="lehetHaromszog" style="border: solid black 1px;">
+            <!-- <th>asdasd</th> -->
+        </table>
+
+        <table id="derekszogu" style="border: solid black 1px;">
+            <!-- <th>asdasd</th> -->
+        </table>
+
+        <table id="keruletTerulet" style="border: solid rgb(0, 0, 0) 1px;">
+            <!-- <th>asdasd</th> -->
+        </table>
+    </table>
+
+    <script>
+        function random()
+        {
+            return Math.floor(Math.random() * 99) +1
+        }
+
+        const szamok = [];
+
+        function haromSzam()
+        {
+            let mennyiseg = parseInt(document.getElementById("bekeres").value);
+
+            for(let k=0;k<mennyiseg;k++)
+            {
+                for(let i=0;i<3;i++)
+                {
+                    szamok.push(random());
+                }
+                console.log(szamok);
+            }
+        }
+
+        function tablaKiIr()
+        {
+
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    haromszogekrol mindent is
+    1. urlap - hany db haromszog legyen - 3 random szam sorsolas - 0-nal nagyobb 100-nal kisebb             ✅
+             - oldalai veletlenszeruen sorsolva 0-nal nagyobb 100-nal kisebb egesz szamok                   ✅        
+                - erre kulon fuggveny - 1 szam harmast sorsol                                               ✅
+    2. adatokat gyujtson
+        - 1 nagy tablazatban tobb kisebb tablazat                                                           ✅
+            - elso oszlopban az osszes szamharmas adata - zold szinu legyen a szovege annak a sornak, ahol lehet haromszog, piros ahol nem lehet
+                                                        - ennek eldontesere meg egy fuggveny - vissza adja h - lehet
+                                                                                                             - nem lehet haromszog
+            - masodik oszlop - azok a szamharmasok amibol lehet haromszoget csinalni (barmely ket oldal osszege nagyobb mint a harmadik)
+            - harmadik oszlop - megkeresni van-e derekszogu, ha van akkor a harmadik oszlopban akkor a derekszogu szamharmasok szerepelnek
+            - negyedik oszlop - mindegyik szamharmas melle egy kulon cellaba a terulet es a kerulet legyen kiszamolva
+-->
